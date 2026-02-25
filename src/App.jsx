@@ -24,11 +24,15 @@ function App() {
     "/archive": "Archivo | Tobias Arraiza ",
     "/information": "Informacion | Tobias Arraiza ",
     "/sample-project": "Proyecto | Tobias Arraiza ",
+    "/project": "Proyecto | Tobias Arraiza ",
   };
 
   useEffect(() => {
-    const currentTitle = pageTitles[location.pathname] || "Tobias Arraiza";
-    document.title = currentTitle;
+    let currentTitle = pageTitles[location.pathname];
+    if (!currentTitle && location.pathname.startsWith("/project/")) {
+        currentTitle = pageTitles["/project"];
+    }
+    document.title = currentTitle || "Tobias Arraiza";
 
     if (location.pathname !== "/archive") {
       setTimeout(() => {
@@ -46,6 +50,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/information" element={<Information />} />
+          <Route path="/project/:id" element={<SampleProject />} />
           <Route path="/sample-project" element={<SampleProject />} />
         </Routes>
       </AnimatePresence>

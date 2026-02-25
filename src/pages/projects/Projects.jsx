@@ -10,63 +10,33 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import ProjectImg1 from "../../assets/projects/project1.png";
-import ProjectImg2 from "../../assets/projects/project2.jpg";
-import ProjectImg3 from "../../assets/projects/project3.jpg";
-import ProjectImg4 from "../../assets/projects/project4.jpg";
-import ProjectImg5 from "../../assets/projects/project5.jpg";
-import ProjectImg6 from "../../assets/projects/project6.jpg";
+import { useLanguage } from "../../context/LanguageContext";
+import { projectsData } from "../../data/projects";
+
 
 const Projects = () => {
   const [projectList, setProjectList] = useState([]);
   const containerRef = useRef(null);
   const lenis = useLenis(({ scroll }) => { });
-
-  const projects = [
-    {
-      name: "Uttil",
-      category: "Brand Identity & App Design",
-      img: ProjectImg1,
-    },
-    {
-      name: "Echoes of Light",
-      category: "Digital Illustration",
-      img: ProjectImg2,
-    },
-    {
-      name: "Urban Symphony",
-      category: "Environmental Design",
-      img: ProjectImg3,
-    },
-    {
-      name: "Fragmented Reality",
-      category: "3D Animation",
-      img: ProjectImg4,
-    },
-    {
-      name: "Luminous Flux",
-      category: "Motion Graphics",
-      img: ProjectImg5,
-    },
-    {
-      name: "Reflections",
-      category: "Interactive Media",
-      img: ProjectImg6,
-    },
-  ];
+  const { language } = useLanguage();
 
   useEffect(() => {
     const initialSet = Array(30)
       .fill()
       .flatMap((_, i) =>
-        projects.map((project, j) => ({
+        projectsData.map((project, j) => ({
           ...project,
-          name: `${project.name}`,
-          id: i * projects.length + j,
+          // Use client name effectively as the short name, or fall back to title if needed.
+          // In the original code, "name" was used.
+          displayName: project.id === 'uttil' ? project.client : (project.title[language] || project.title['en']), 
+          displayCategory: project.role,
+          img: project.thumbnail,
+          uniqueId: i * projectsData.length + j,
         }))
       );
     setProjectList(initialSet);
-  }, []);
+  }, [language]);
+
 
   useEffect(() => {
     if (containerRef.current && projectList.length > 0) {
@@ -117,16 +87,16 @@ const Projects = () => {
       >
         <div className="container">
           {projectList.map((project) => (
-            <div className="row" key={project.id}>
+            <div className="row" key={project.uniqueId}>
               <div className="project-item">
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to={`/project/${project.id}`}>
                     <img src={project.img} alt="" />
                   </Link>
                 </div>
                 <div className="project-details">
-                  <p id="project-name"> &#x2192; {project.name}</p>
-                  <p id="project-category">{project.category}</p>
+                  <p id="project-name"> &#x2192; {project.displayName}</p>
+                  <p id="project-category">{project.displayCategory}</p>
                 </div>
               </div>
             </div>
