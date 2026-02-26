@@ -34,10 +34,20 @@
   padding: 0.75em 1.25em;
 }
 
+.nav-link.active-nav {
+  background-color: #d8ff00; /* bright green */
+}
+
+.nav-link.active-nav a {
+  color: #000;
+}
+
+.menu-link.active-menu {
+  color: #d8ff00;
+}
 
 .lenguage {
   background-color: transparent;
-
 }
 
 .article-item {
@@ -280,7 +290,6 @@
 }
 
 @media (max-width: 900px) {
-
   .nav-links,
   .nav-external-links {
     display: none;

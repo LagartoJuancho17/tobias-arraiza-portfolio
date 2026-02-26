@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const container = useRef();
   const tl = useRef();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -116,15 +117,22 @@ const Navbar = () => {
         </div>
         <div className="menu-copy">
           <div className="menu-links">
-            {navLinks.map((link, index) => (
-              <div className="menu-link-item" key={index}>
-                <div className="menu-link-item-holder" onClick={toggleMenu}>
-                  <Link to={link.url} className="menu-link">
-                    {link.label}
-                  </Link>
+            {navLinks.map((link, index) => {
+              const isActivePath =
+                link.url === "/"
+                  ? location.pathname === "/"
+                  : location.pathname.startsWith(link.url);
+
+              return (
+                <div className="menu-link-item" key={index}>
+                  <div className="menu-link-item-holder" onClick={toggleMenu}>
+                    <Link to={link.url} className={`menu-link ${isActivePath ? "active-menu" : ""}`}>
+                      {link.label}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
             <div className="menu-link-item">
               <div className="menu-link-item-holder" style={{ display: "flex", gap: "20px" }}>
                 <span onClick={() => { toggleLanguage("es"); toggleMenu(); }} style={{ opacity: language === "es" ? 1 : 0.5, cursor: "pointer" }}>Español</span>
@@ -160,11 +168,18 @@ const Navbar = () => {
       </div>
 
       <div className="nav-links">
-        {navLinks.map((link, index) => (
-          <div className="nav-link" key={index}>
-            <Link to={link.url}>{link.label}</Link>
-          </div>
-        ))}
+        {navLinks.map((link, index) => {
+          const isActivePath =
+            link.url === "/"
+              ? location.pathname === "/"
+              : location.pathname.startsWith(link.url);
+
+          return (
+            <div className={`nav-link ${isActivePath ? "active-nav" : ""}`} key={index}>
+              <Link to={link.url}>{link.label}</Link>
+            </div>
+          );
+        })}
         <div className="nav-link lenguage" onClick={() => toggleLanguage("es")} style={{ cursor: "pointer", opacity: language === "es" ? 1 : 0.5 }}>
           <span>Español</span>
         </div>

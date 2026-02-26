@@ -8,6 +8,48 @@
   border-radius: 0.5em;
   overflow: hidden;
   z-index: 100;
+  pointer-events: none; /* Let clicks pass through to the archive items beneath */
+}
+
+.archive-preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.archive-item:hover ~ .archive-preview .archive-preview-overlay, /* When hovering the grid but needing an ancestor to pass it down */
+.archive-preview:has(~ .archive-item:hover) .archive-preview-overlay, /* fallback */
+.archive-preview .archive-preview-overlay {
+  opacity: 1; /* Always show the overlay since this is what follows the mouse/is centered */
+}
+
+.archive-preview-overlay span {
+  font-family: 'Notch Grotesk';
+  color: #fff;
+  font-size: 1em;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulseOpacity 4s infinite ease-in-out;
+}
+
+@keyframes pulseOpacity {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 900px) {
