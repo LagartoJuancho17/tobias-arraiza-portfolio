@@ -6,9 +6,9 @@ import { useGSAP } from "@gsap/react";
 
 import "./Navbar.css";
 
-import ArticleImg1 from "../../assets/nav/article-1.jpg";
-import ArticleImg2 from "../../assets/nav/article-2.jpg";
-import ArticleImg3 from "../../assets/nav/article-3.png";
+import ArticleImg1 from "../../assets/nav/article-1.webp";
+import ArticleImg2 from "../../assets/nav/article-2.webp";
+import ArticleImg3 from "../../assets/nav/article-3.webp";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -75,13 +75,13 @@ const Navbar = () => {
     {
       url: "https://de-pan-cia.vercel.app/",
       title: "De Pan Cia",
-      subTitle: "Web Design",
+      subTitle: "Web Design in progress ",
       img: ArticleImg1,
     },
     {
       url: "https://drillot.vercel.app/",
       title: "Drillot Web",
-      subTitle: "Web Design",
+      subTitle: "Web Design in progress ",
       img: ArticleImg2,
     },
   ];

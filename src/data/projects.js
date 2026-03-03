@@ -1,44 +1,44 @@
 // Uttil Images
-import uttilPortada from "../assets/projects/uttilportada.png";
+import uttilPortada from "../assets/projects/uttilportada.webp";
 import uttilHero from "../assets/projects/uttilhero.png";
-import uttilHero2 from "../assets/projects/uttilhero2.png";
-import uttilHero3 from "../assets/projects/uttilhero3.png";
-import uttilImagen1 from "../assets/projects/uttilimagen1.png";
-import uttilImagen2 from "../assets/projects/uttilimagen2.png";
-import uttilImagen3 from "../assets/projects/uttilimagen3.png";
-import uttilImagen4 from "../assets/projects/uttilimagen4.png";
+import uttilHero2 from "../assets/projects/uttilhero2.webp";
+import uttilHero3 from "../assets/projects/uttilhero3.webp";
+import uttilImagen1 from "../assets/projects/uttilimagen1.webp";
+import uttilImagen2 from "../assets/projects/uttilimagen2.webp";
+import uttilImagen3 from "../assets/projects/uttilimagen3.webp";
+import uttilImagen4 from "../assets/projects/uttilimagen4.webp";
 
 // Plus Bank Images
-import plusbankPortada from "../assets/projects/plusbankportada.jpg";
-import plusbankHero from "../assets/projects/plusbankhero.jpg";
+import plusbankPortada from "../assets/projects/plusbankportada.webp";
+import plusbankHero from "../assets/projects/plusbankhero.webp";
 import plusbankHero2 from "../assets/projects/plusbankhero2.mp4";
-import plusbankHero3 from "../assets/projects/plusbankhero3.jpg";
-import plusbankImagen1 from "../assets/projects/plusbankimagen1.jpg";
-import plusbankImagen2 from "../assets/projects/plusbankimagen2.jpg";
-import plusbankImagen3 from "../assets/projects/plusbankimagen3.jpg";
-import plusbankImagen4 from "../assets/projects/plusbankimagen4.jpg";
+import plusbankHero3 from "../assets/projects/plusbankhero3.webp";
+import plusbankImagen1 from "../assets/projects/plusbankimagen1.webp";
+import plusbankImagen2 from "../assets/projects/plusbankimagen2.webp";
+import plusbankImagen3 from "../assets/projects/plusbankimagen3.webp";
+import plusbankImagen4 from "../assets/projects/plusbankimagen4.webp";
 
 // Nadar Images
-import nadarPortada from "../assets/projects/nadarportada.png";
-import nadarHero from "../assets/projects/nadarhero.png";
-import nadarHero2 from "../assets/projects/nadarhero2.png";
-import nadarHero3 from "../assets/projects/nadarhero3.png";
-import nadarImagen1 from "../assets/projects/nadarimagen1.png";
-import nadarImagen2 from "../assets/projects/nadarimagen2.png";
-import nadarImagen3 from "../assets/projects/nadarimagen3.png";
-import nadarImagen4 from "../assets/projects/nadarimagen4.png";
+import nadarPortada from "../assets/projects/nadarportada.webp";
+import nadarHero from "../assets/projects/nadarhero.webp";
+import nadarHero2 from "../assets/projects/nadarhero2.webp";
+import nadarHero3 from "../assets/projects/nadarhero3.webp";
+import nadarImagen1 from "../assets/projects/nadarimagen1.webp";
+import nadarImagen2 from "../assets/projects/nadarimagen2.webp";
+import nadarImagen3 from "../assets/projects/nadarimagen3.webp";
+import nadarImagen4 from "../assets/projects/nadarimagen4.webp";
 
 // Mapping Images & Videos
-import mappingPortada from "../assets/projects/mappingportada.jpg";
+import mappingPortada from "../assets/projects/mappingportada.webp";
 import mappingHero1 from "../assets/projects/mappinghero1.mov";
 import mappingHero2 from "../assets/projects/mappinghero2.mov";
 import mappingHero3 from "../assets/projects/mappinghero3.mov";
 import mappingVideo1 from "../assets/projects/mappingvideo1.mov";
 import mappingVideo3 from "../assets/projects/mappingvideo3.mov";
-import mappingImagen1 from "../assets/projects/mappingimagen1.JPG";
-import mappingImagen2 from "../assets/projects/mappingimagen2.JPG";
-import mappingImagen3 from "../assets/projects/mappingimagen3.JPG";
-import mappingImagen4 from "../assets/projects/mappingimagen4.JPG";
+import mappingImagen1 from "../assets/projects/mappingimagen1.webp";
+import mappingImagen2 from "../assets/projects/mappingimagen2.webp";
+import mappingImagen3 from "../assets/projects/mappingimagen3.webp";
+import mappingImagen4 from "../assets/projects/mappingimagen4.webp";
 
 export const projectsData = [
   {

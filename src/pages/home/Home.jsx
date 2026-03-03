@@ -57,7 +57,7 @@ const Home = () => {
           <div className="line">
             <Link
               id="hero-link-01"
-              to="mailto:tobiasarraiza17@gmail.com"
+              to="mailto:tobiasarraiza17@gmail.webp"
               className="word fancy"
             >
               &#x2192;Email
