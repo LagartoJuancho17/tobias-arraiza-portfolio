@@ -8,18 +8,15 @@ import Transition from "../../components/transition/Transition";
 
 import {
   services,
-  // campaigns,
-  recognition,
   tecnologiasWeb,
   tecnologiasExtra,
-  collaborations,
-  exhibitions,
-  press,
+  education,
+  experience,
 } from "./info";
 
 const Information = () => {
   const lenis = useLenis(({ scroll }) => { });
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <ReactLenis root>
@@ -38,11 +35,6 @@ const Information = () => {
                 </ul>
               </div>
               <div className="sub-col">
-                {/* <ul>
-                  {campaigns.map((item) => (
-                    <li key={item.id}>&#x2192; {item.text}</li>
-                  ))}
-                </ul> */}
               </div>
             </div>
             <div className="col">
@@ -54,18 +46,49 @@ const Information = () => {
               </div>
             </div>
           </div>
+          
+          <div className="info-resume">
+            <div className="col resume-section">
+              <p className="resume-heading">{language === 'es' ? 'Educación' : 'Education'}</p>
+              <div className="divider"></div>
+              <div className="resume-list">
+                {education.map((item) => (
+                  <div key={item.id} className="resume-item">
+                    <h3>{item.title[language]}</h3>
+                    <p className="resume-role">{item.role[language]}</p>
+                    <p className="resume-date">{item.date[language]}</p>
+                    <ul>
+                      {item.details.map((detail, index) => (
+                        <li key={index}>&#x2192; {detail[language]}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="col resume-section">
+              <p className="resume-heading">{language === 'es' ? 'Experiencia' : 'Experience'}</p>
+              <div className="divider"></div>
+              <div className="resume-list">
+                {experience.map((item) => (
+                  <div key={item.id} className="resume-item">
+                    <h3>{item.title[language]}</h3>
+                    <p className="resume-role">{item.role[language]}</p>
+                    <p className="resume-date">{item.date[language]}</p>
+                    <ul>
+                      {item.details.map((detail, index) => (
+                        <li key={index}>&#x2192; {detail[language]}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="info-content">
             <div className="col">
-              {/* <div className="awards">
-                <p>Recognition</p>
-                <div className="divider"></div>
-                <ul>
-                  {recognition.map((item) => (
-                    <li key={item.id}>&#x2192; {item.text}</li>
-                  ))}
-                </ul>
-              </div> */}
-
               <div className="tecnologias">
                 <p>{t.information.webTech}</p>
                 <div className="divider"></div>
@@ -87,17 +110,6 @@ const Information = () => {
                 </ul>
               </div>
             </div>
-            {/* <div className="col">
-              <div className="selected-clients">
-                <p>Colaboraciones</p>
-                <div className="divider"></div>
-                <ul>
-                  {collaborations.map((item) => (
-                    <li key={item.id}>&#x2192; {item.text}</li>
-                  ))}
-                </ul>
-              </div>
-            </div> */}
           </div>
 
           {/* <div className="info-content-2">

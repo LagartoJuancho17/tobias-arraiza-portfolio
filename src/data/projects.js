@@ -1,37 +1,42 @@
-import ProjectHeroImg from "../assets/sample-projects/sample-project-hero-2.png";
-import ProjectHeroImg2 from "../assets/sample-projects/sample-project-hero-3.png";
-import ProjectHeroImg3 from "../assets/sample-projects/sample-project-hero.png";
-import ProjectImg1 from "../assets/sample-projects/sample-project-1.png";
-import ProjectImg2 from "../assets/sample-projects/sample-project-2.png";
-import ProjectImg3 from "../assets/sample-projects/sample-project-3.png";
-import ProjectImg5 from "../assets/sample-projects/sample-project-5.png";
-import ProjectImg4 from "../assets/sample-projects/sample-project-4.png";
+// Uttil Images
+import uttilPortada from "../assets/projects/uttilportada.png";
+import uttilHero from "../assets/projects/uttilhero.png";
+import uttilHero2 from "../assets/projects/uttilhero2.png";
+import uttilHero3 from "../assets/projects/uttilhero3.png";
+import uttilImagen1 from "../assets/projects/uttilimagen1.png";
+import uttilImagen2 from "../assets/projects/uttilimagen2.png";
+import uttilImagen3 from "../assets/projects/uttilimagen3.png";
+import uttilImagen4 from "../assets/projects/uttilimagen4.png";
 
-// Importing images from Projects.jsx to reuse them for the list view or new projects
-import ListImg1 from "../assets/projects/project1.png";
-import ListImg2 from "../assets/projects/project2.7.jpg";
-import ListImg3 from "../assets/projects/project3.png"; 
-import ListImg4 from "../assets/projects/project4.jpg";
-import ListImg5 from "../assets/projects/project5.jpg";
-import ListImg6 from "../assets/projects/project6.jpg";
+// Plus Bank Images
+import plusbankPortada from "../assets/projects/plusbankportada.jpg";
+import plusbankHero from "../assets/projects/plusbankhero.jpg";
+import plusbankHero2 from "../assets/projects/plusbankhero2.mp4";
+import plusbankHero3 from "../assets/projects/plusbankhero3.jpg";
+import plusbankImagen1 from "../assets/projects/plusbankimagen1.jpg";
+import plusbankImagen2 from "../assets/projects/plusbankimagen2.jpg";
+import plusbankImagen3 from "../assets/projects/plusbankimagen3.jpg";
+import plusbankImagen4 from "../assets/projects/plusbankimagen4.jpg";
 
-// Project 2 Images
-import Project2Img1 from "../assets/projects/project2.1.jpg";
-import Project2Img2 from "../assets/projects/project2.2.jpg";
-import Project2Img3 from "../assets/projects/project2.3.jpg";
-import Project2Img4 from "../assets/projects/project2.4.jpg";
-import Project2Img5 from "../assets/projects/project2.5.jpg";
-import Project2Img6 from "../assets/projects/project2.6.jpg";
-import Project2Video from "../assets/projects/project2video.mp4";
+// Nadar Images
+import nadarPortada from "../assets/projects/nadarportada.png";
+import nadarHero from "../assets/projects/nadarhero.png";
+import nadarHero2 from "../assets/projects/nadarhero2.png";
+import nadarHero3 from "../assets/projects/nadarhero3.png";
+import nadarImagen1 from "../assets/projects/nadarimagen1.png";
+import nadarImagen2 from "../assets/projects/nadarimagen2.png";
+import nadarImagen3 from "../assets/projects/nadarimagen3.png";
+import nadarImagen4 from "../assets/projects/nadarimagen4.png";
 
-
-// Project 3 Images
-import Project3Img1 from "../assets/projects/project3.1.png";
-import Project3Img2 from "../assets/projects/project3.2.png";
-import Project3Img3 from "../assets/projects/project3.3.png";
-import Project3Img4 from "../assets/projects/project3.4.png";
-import Project3Img5 from "../assets/projects/project3.5.png";
-import Project3Img6 from "../assets/projects/project3.6.png";
+// Mapping Images & Videos
+import mappingPortada from "../assets/projects/mappingportada.jpg";
+import mappingHero1 from "../assets/projects/mappinghero1.mov";
+import mappingHero2 from "../assets/projects/mappinghero2.mov";
+import mappingHero3 from "../assets/projects/mappinghero3.mov";
+import mappingVideo1 from "../assets/projects/mappingvideo1.mov";
+import mappingVideo2 from "../assets/projects/mappingvideo2.mov";
+import mappingVideo3 from "../assets/projects/mappingvideo3.mov";
+import mappingVideo4 from "../assets/projects/mappingvideo4.mov";
 
 export const projectsData = [
   {
@@ -58,15 +63,15 @@ export const projectsData = [
       development: { es: "Desarrollo", en: "Development" },
     },
     images: {
-      hero: ProjectHeroImg,
-      hero2: ProjectHeroImg2,
-      hero3: ProjectHeroImg3,
-      img1: ProjectImg1,
-      img2: ProjectImg2,
-      img3: ProjectImg5,
-      img4: ProjectImg4,
+      hero: uttilHero,
+      hero2: uttilHero2,
+      hero3: uttilHero3,
+      img1: uttilImagen1,
+      img2: uttilImagen2,
+      img3: uttilImagen3,
+      img4: uttilImagen4,
     },
-    thumbnail: ListImg1,
+    thumbnail: uttilPortada,
   },
   {
     id: "echoes-of-light",
@@ -79,28 +84,28 @@ export const projectsData = [
       en: "Plus Bank",
     },
     description1: {
-      es: "Explorando la interacción entre la luz y la oscuridad en entornos urbanos futuristas. Este proyecto busca evocar emociones a través del uso del color y la composición dinámica.",
-      en: "Exploring the interaction between light and darkness in futuristic urban environments. This project aims to evoke emotions through the use of color and dynamic composition.",
+      es: "Una app que busca la integración entre la innovación tecnológica y el diseño minimalista, pensada como una billetera virtual moderna, segura y centrada en la experiencia del usuario. Combina una interfaz limpia, intuitiva y visualmente equilibrada con funcionalidades avanzadas como transferencias instantáneas, gestión inteligente de gastos, pagos con QR, control de suscripciones y análisis financiero en tiempo real.",
+      en: "An app that seeks the integration between technological innovation and minimalist design, conceived as a modern, secure virtual wallet focused on the user experience. It combines a clean, intuitive, and visually balanced interface with advanced features such as instant transfers, intelligent expense management, QR payments, subscription control, and real-time financial analysis.",
     },
     description2: {
-      es: "Una serie de ilustraciones que narran historias silenciosas de la ciudad nocturna. Cada pieza es un fragmento de una realidad alternativa donde la tecnología y la naturaleza coexisten.",
-      en: "A series of illustrations narrating silent stories of the night city. Each piece is a fragment of an alternate reality where technology and nature coexist.",
+      es: "El diseño minimalista no es solo una decisión estética, sino estratégica: reduce fricciones, simplifica procesos complejos y prioriza la claridad visual para que cada acción sea rápida y natural. La tecnología trabaja en segundo plano mediante sistemas de encriptación, autenticación biométrica y arquitectura escalable, garantizando seguridad, velocidad y confiabilidad.",
+      en: "Minimalist design is not just an aesthetic decision, but a strategic one: it reduces friction, simplifies complex processes, and prioritizes visual clarity so that each action is quick and natural. Technology works in the background through encryption systems, biometric authentication, and scalable architecture, ensuring security, speed, and reliability.",
     },
     subInfo: {
-      branding: { es: "Ilustración", en: "Illustration" },
+      branding: { es: "Diseño UI/UX", en: "UI/UX Design" },
       uiux: { es: "Arte Conceptual", en: "Concept Art" },
       development: { es: "Diseño", en: "Design" },
     },
     images: {
-      hero: Project2Img1,
-      hero2: Project2Video,
-      hero3: Project2Img2,
-      img1: Project2Img3,
-      img2: Project2Img4,
-      img3: Project2Img5,
-      img4: Project2Img6,
+      hero: plusbankHero,
+      hero2: plusbankHero2,
+      hero3: plusbankHero3,
+      img1: plusbankImagen1,
+      img2: plusbankImagen2,
+      img3: plusbankImagen3,
+      img4: plusbankImagen4,
     },
-    thumbnail: ListImg2,
+    thumbnail: plusbankPortada,
   },
   {
     id: "nadar",
@@ -124,118 +129,51 @@ export const projectsData = [
         branding: { es: "Branding", en: "Branding" },
         uiux: { es: "Arte Conceptual", en: "Concept Art" },
         development: { es: "Diseño", en: "Design" },
+        appDesign: { es: "App Design", en: "App Design" },
     },
     images: {
-        hero: ProjectImg3,
-        hero2: Project3Img5,
-        hero3: Project3Img6,
-        img1: Project3Img1,
-        img2: Project3Img2,
-        img3: Project3Img3,
-        img4: Project3Img4,
+        hero: nadarHero,
+        hero2: nadarHero2,
+        hero3: nadarHero3,
+        img1: nadarImagen1,
+        img2: nadarImagen2,
+        img3: nadarImagen3,
+        img4: nadarImagen4,
     },
-    thumbnail: ListImg3,
+    thumbnail: nadarPortada,
   },
   {
-      id: "fragmented-reality",
-      year: "2024",
-      client: "NeoVision",
-      studio: "Future Labs",
-      role: "3D Animation",
-      title: {
-          es: "Realidad Fragmentada",
-          en: "Fragmented Reality",
-      },
-      description1: {
-          es: "Una experiencia inmersiva en 3D que cuestiona la percepción de la realidad.",
-          en: "An immersive 3D experience questioning the perception of reality.",
-      },
-      description2: {
-          es: "Animaciones complejas y texturas detalladas para crear un mundo surrealista.",
-          en: "Complex animations and detailed textures to create a surreal world.",
-      },
-      subInfo: {
-          branding: { es: "3D Art", en: "3D Art" },
-          uiux: { es: "Motion", en: "Motion" },
-          development: { es: "Animation", en: "Animation" },
-      },
-      images: {
-          hero: ProjectImg4,
-          hero2: ListImg5,
-          hero3: ListImg6,
-          img1: ListImg1,
-          img2: ListImg2,
-          img3: ListImg3,
-          img4: ListImg4,
-      },
-      thumbnail: ListImg4,
-  },
-   {
-      id: "luminous-flux",
-      year: "2023",
-      client: "Flux Inc",
-      studio: "Lightwave",
-      role: "Motion Graphics",
-      title: {
-          es: "Flujo Luminoso",
-          en: "Luminous Flux",
-      },
-      description1: {
-          es: "Gráficos en movimiento fluidos y energéticos para una marca de bebidas deportivas.",
-          en: "Fluid and energetic motion graphics for a sports drink brand.",
-      },
-      description2: {
-          es: "Uso de partículas y dinámicas de fluidos para visualizar la energía.",
-          en: "Use of particles and fluid dynamics to visualize energy.",
-      },
-      subInfo: {
-          branding: { es: "Motion", en: "Motion" },
-          uiux: { es: "Visual Effects", en: "Visual Effects" },
-          development: { es: "Commercial", en: "Commercial" },
-      },
-      images: {
-          hero: ListImg5,
-          hero2: ListImg6,
-          hero3: ListImg1,
-          img1: ListImg2,
-          img2: ListImg3,
-          img3: ListImg4,
-          img4: ListImg5,
-      },
-      thumbnail: ListImg5,
-  },
-  {
-      id: "reflections",
-      year: "2022",
-      client: "Mirror Co",
-      studio: "Reflect Studios",
-      role: "Interactive Media",
-      title: {
-          es: "Reflejos",
-          en: "Reflections",
-      },
-      description1: {
-          es: "Instalación interactiva que responde al movimiento del espectador.",
-          en: "Interactive installation responding to viewer movement.",
-      },
-      description2: {
-          es: "Exploración de la identidad digital a través de espejos interactivos.",
-          en: "Exploration of digital identity through interactive mirrors.",
-      },
-      subInfo: {
-          branding: { es: "Interactive", en: "Interactive" },
-          uiux: { es: "Installation", en: "Installation" },
-          development: { es: "Code", en: "Code" },
-      },
-      images: {
-          hero: ListImg6,
-          hero2: ListImg1,
-          hero3: ListImg2,
-          img1: ListImg3,
-          img2: ListImg4,
-          img3: ListImg5,
-          img4: ListImg6,
-      },
-      thumbnail: ListImg6,
+    id: "mapping",
+    year: "2025",
+    client: "UMAI",
+    studio: "Tobias Arraiza, Lola Mazza, Victoria Villalba, Camila Zalcman, Mariano Makedonsky",
+    role: "Projection Mapping",
+    title: {
+      es: "UMAI - Mapping",
+      en: "UMAI - Mapping",
+    },
+    description1: {
+      es: "Un proyecto de mapping que explora la intersección entre arte digital, gamificación e interacción expandida, proponiendo una experiencia inmersiva donde el espacio físico se transforma en una interfaz de juego. A través de proyecciones dinámicas adaptadas a la arquitectura, el entorno deja de ser un soporte pasivo para convertirse en un sistema reactivo que responde a la acción del usuario.",
+      en: "A mapping project that explores the intersection between digital art, gamification and expanded interaction, proposing an immersive experience where the physical space transforms into a game interface. Through dynamic projections adapted to the architecture, the environment ceases to be a passive support to become a reactive system that responds to user action.",
+    },
+    description2: {
+        es: "Uno de los aspectos más innovadores fue la incorporación de inputs no convencionales: sensores de movimiento, variaciones de luz, sonido ambiente o presión física reemplazaron al joystick o teclado tradicional. Esto permitió ampliar la noción de control y repensar la relación entre usuario y sistema, priorizando una experiencia más intuitiva, física y performática.\n\n El resultado fue una instalación interactiva que combina tecnología, diseño y experimentación, transformando el mapping en una plataforma lúdica donde la arquitectura, la proyección y el cuerpo dialogan en un mismo ecosistema digital.",
+        en: "One of the most innovative aspects was the incorporation of unconventional inputs: motion sensors, light variations, ambient sound or physical pressure replaced the traditional joystick or keyboard. This allowed us to expand the notion of control and rethink the relationship between user and system, prioritizing a more intuitive, physical and performative experience.\n\n The result was an interactive installation that combines technology, design and experimentation, transforming mapping into a playful platform where architecture, projection and the body dialogue within the same digital ecosystem.",
+    },
+    subInfo: {
+        branding: { es: "Mapping", en: "Mapping" },
+        uiux: { es: "Instalación", en: "Installation" },
+        development: { es: "Visuales", en: "Visuals" },
+    },
+    images: {
+        hero: mappingHero1,
+        hero2: mappingHero2,
+        hero3: mappingHero3,
+        img1: mappingVideo1,
+        img2: mappingVideo2,
+        img3: mappingVideo3,
+        img4: mappingVideo4,
+    },
+    thumbnail: mappingPortada,
   }
 ];

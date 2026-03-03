@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { ReactLenis, useLenis } from "lenis/react";
+import { useLanguage } from "../../context/LanguageContext";
 
 import "./Archive.css";
 
@@ -13,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Archive = () => {
+  const { t, language } = useLanguage();
   const [archiveList, setArchiveList] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedArchive, setSelectedArchive] = useState(null);
@@ -96,8 +98,6 @@ const Archive = () => {
         style={{
           height: "100vh",
           top: "-25em",
-          //  overflowY: "auto"
-          // to enable infinite scrolling, uncomment `overflowY: "auto"` and remove the <ReactLenis root> component from root
         }}
       >
         <div className="container">
@@ -121,7 +121,7 @@ const Archive = () => {
               >
                 <div className={`archive-details ${archive.originalIndex === activeIndex ? "active" : ""}`}>
                   <h1 id="archive-name">{archive.name}</h1>
-                  <p id="archive-category">{archive.category}</p>
+                  <p id="archive-category">{archive.category[language] || archive.category}</p>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ const Archive = () => {
               >
                 <button className="archive-modal-close" onClick={() => setSelectedArchive(null)}>✕</button>
                 <h2 className="archive-modal-title">{selectedArchive.name}</h2>
-                <p className="archive-modal-category">{selectedArchive.category}</p>
+                <p className="archive-modal-category">{selectedArchive.category[language] || selectedArchive.category}</p>
                 
                 <div className="archive-modal-media">
                   {selectedArchive.video && (
@@ -178,11 +178,11 @@ const Archive = () => {
                   )}
                 </div>
 
-                <p className="archive-modal-description">{selectedArchive.description}</p>
+                <p className="archive-modal-description">{selectedArchive.description[language] || selectedArchive.description}</p>
                 
                 {selectedArchive.link && (
                   <a href={selectedArchive.link} target="_blank" rel="noopener noreferrer" className="archive-modal-link">
-                    Visitar Proyecto ↗
+                    {language === "es" ? "Visitar Proyecto ↗" : "Visit Project ↗"}
                   </a>
                 )}
               </div>

@@ -222,6 +222,7 @@ p#archive-category {
   font-size: 1.1em;
   line-height: 1.6;
   opacity: 0.9;
+  white-space: pre-wrap;
 }
 
 .archive-modal-link {

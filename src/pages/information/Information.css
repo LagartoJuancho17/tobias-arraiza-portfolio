@@ -9,6 +9,57 @@
   margin: 8em 0;
 }
 
+.info-resume {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+  margin: 4em 0 8em 0;
+}
+
+.resume-section {
+  flex: 1;
+}
+
+.resume-heading {
+  font-size: 22px;
+  margin-bottom: 0.5em;
+}
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.resume-item h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+
+.resume-item p.resume-role {
+  font-size: 1.1em;
+  opacity: 0.8;
+  margin-bottom: 0.25em;
+}
+
+.resume-item p.resume-date {
+  font-size: 0.9em;
+  opacity: 0.5;
+  margin-bottom: 1em;
+}
+
+.resume-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-item li {
+  margin-bottom: 0.5em;
+  opacity: 0.7;
+}
+
 .info-services .col {
   flex: 1;
 }
@@ -53,6 +104,7 @@
 
 @media (max-width: 900px) {
   .info-services,
+  .info-resume,
   .info-content,
   .info-content-2 {
     flex-direction: column;

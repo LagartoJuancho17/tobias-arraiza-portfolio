@@ -12,7 +12,28 @@ const SampleProject = () => {
   const { t, language } = useLanguage();
   const { id } = useParams();
 
-  // Fallback to 'uttil' if no ID is provided or if id is not found (handling /sample-project route for backward compatibility)
+  const isVideo = (src) => {
+    if (typeof src !== 'string') return false;
+    const videoExtensions = ['.mp4', '.mov', '.m4v', '.webm'];
+    return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+  };
+
+  const renderMedia = (src, alt = "") => {
+    if (isVideo(src)) {
+      return (
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      );
+    }
+    return <img src={src} alt={alt} />;
+  };
+
+  // Fallback to 'uttil' if no ID is provided or if id is not found
   const projectIndex = projectsData.findIndex((p) => p.id === id);
   const currentProjectIndex = projectIndex !== -1 ? projectIndex : 0;
   const project = projectsData[currentProjectIndex];
@@ -27,18 +48,7 @@ const SampleProject = () => {
       <div className="project">
         <div className="container">
           <div className="project-hero-img">
-            {project.images.heroVideo ? (
-              <video
-                src={project.images.heroVideo}
-                poster={project.images.hero}
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            ) : (
-              <img src={project.images.hero} alt="Project Hero Img" />
-            )}
+            {renderMedia(project.images.heroVideo || project.images.hero, "Project Hero")}
           </div>
 
           <div className="project-info">
@@ -84,17 +94,7 @@ const SampleProject = () => {
           </div>
 
           <div className="project-hero-img-2">
-            {typeof project.images.hero2 === 'string' && project.images.hero2.endsWith('.mp4') ? (
-               <video
-                src={project.images.hero2}
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            ) : (
-                <img src={project.images.hero2} alt="" />
-            )}
+            {renderMedia(project.images.hero2)}
           </div>
 
           <div className="project-copy">
@@ -109,25 +109,25 @@ const SampleProject = () => {
 
           <div className="project-imgs">
             <div className="img">
-              <img src={project.images.img1} alt="" />
+              {renderMedia(project.images.img1)}
             </div>
 
             <div className="img">
-              <img src={project.images.img4} alt="" />
+              {renderMedia(project.images.img4)}
             </div>
           </div>
           <div className="project-imgs">
             <div className="img">
-              <img src={project.images.img3} alt="" />
+              {renderMedia(project.images.img3)}
             </div>
 
             <div className="img">
-              <img src={project.images.img2} alt="" />
+              {renderMedia(project.images.img2)}
             </div>
           </div>
 
           <div className="project-hero-img-3">
-            <img src={project.images.hero3} alt="" />
+            {renderMedia(project.images.hero3)}
           </div>
 
           <div className="next-project-cta">
