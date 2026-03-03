@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react";
 
 import "./Navbar.css";
 
-import ArticleImg1 from "../../assets/nav/article-1.png";
-import ArticleImg2 from "../../assets/nav/article-2.png";
+import ArticleImg1 from "../../assets/nav/article-1.jpg";
+import ArticleImg2 from "../../assets/nav/article-2.jpg";
 import ArticleImg3 from "../../assets/nav/article-3.png";
 
 const Navbar = () => {
@@ -73,22 +73,16 @@ const Navbar = () => {
 
   const articleItems = [
     {
-      url: "",
-      title: "Queso Studio",
-      subTitle: "Agency — Crafting for a minimal experience",
+      url: "https://de-pan-cia.vercel.app/",
+      title: "De Pan Cia",
+      subTitle: "Web Design",
       img: ArticleImg1,
     },
     {
-      url: "",
-      title: "Marcos",
-      subTitle: "Design for a better future and past",
+      url: "https://drillot.vercel.app/",
+      title: "Drillot Web",
+      subTitle: "Web Design",
       img: ArticleImg2,
-    },
-    {
-      url: "",
-      title: "Hola",
-      subTitle: "Showcase — Prove for a better website",
-      img: ArticleImg3,
     },
   ];
 

@@ -25,8 +25,8 @@ export const recognition = [
 
 export const tecnologiasWeb = [
   { id: 1, text: "React" },
-  { id: 2, text: "Node.js" },
-  { id: 3, text: "MongoDB" },
+  { id: 2, text: "GSAP" },
+  { id: 3, text: "Tailwind" },
   { id: 4, text: "TypeScript" },
   { id: 5, text: "JavaScript" },
 ];
@@ -40,34 +40,6 @@ export const tecnologiasExtra = [
   { id: 6, text: "Framer" },
 ];
 
-export const collaborations = [
-  { id: 1, text: "Spotify" },
-  { id: 2, text: "Google" },
-  { id: 3, text: "Nike" },
-  { id: 4, text: "Samsung" },
-  { id: 5, text: "Creative Commons" },
-  { id: 6, text: "UNICEF" },
-  { id: 7, text: "TEDx" },
-  { id: 8, text: "IDEO" },
-  { id: 9, text: "Museum of Modern Art" },
-];
-
-export const exhibitions = [
-  { id: 1, text: "Design Futures Symposium" },
-  { id: 2, text: "New York Art Expo" },
-  { id: 3, text: "Global Design Summit 2021" },
-  { id: 4, text: "Visionary Art Talks" },
-  { id: 5, text: "Creative Innovation Conference" },
-  { id: 6, text: "Milan Design Week" },
-  { id: 7, text: "Interactive Media Showcase" },
-  { id: 8, text: "Berlin Design Festival" },
-  { id: 9, text: "Modern Art Conversations" },
-  { id: 10, text: "Future of Design Exhibition 2020" },
-  { id: 11, text: "Tokyo Graphic Design Days" },
-  { id: 12, text: "Urban Art Series" },
-  { id: 13, text: "Creative Process Workshops" },
-  { id: 14, text: "Emerging Artists Exhibition" },
-];
 
 export const education = [
   {

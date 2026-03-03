@@ -29,7 +29,7 @@ const Footer = () => {
 
       <div className="footer-col">
         <div className="footer-link">
-          <p>&copy; Tobias Arraiza 2025</p>
+          <p>&copy; Tobias Arraiza</p>
         </div>
       </div>
     </div>
