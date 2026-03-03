@@ -31,7 +31,7 @@ import nadarImagen4 from "../assets/projects/nadarimagen4.webp";
 // Mapping Images & Videos
 import mappingPortada from "../assets/projects/mappingportada.webp";
 import mappingHero1 from "../assets/projects/mappinghero1.mov";
-import mappingHero2 from "../assets/projects/mappinghero2.mov";
+import mappingHero2 from "../assets/projects/mappinghero2.MOV";
 import mappingHero3 from "../assets/projects/mappinghero3.mov";
 import mappingVideo1 from "../assets/projects/mappingvideo1.mov";
 import mappingVideo3 from "../assets/projects/mappingvideo3.mov";
