@@ -34,9 +34,11 @@ import mappingHero1 from "../assets/projects/mappinghero1.mov";
 import mappingHero2 from "../assets/projects/mappinghero2.mov";
 import mappingHero3 from "../assets/projects/mappinghero3.mov";
 import mappingVideo1 from "../assets/projects/mappingvideo1.mov";
-import mappingVideo2 from "../assets/projects/mappingvideo2.mov";
 import mappingVideo3 from "../assets/projects/mappingvideo3.mov";
-import mappingVideo4 from "../assets/projects/mappingvideo4.mov";
+import mappingImagen1 from "../assets/projects/mappingimagen1.JPG";
+import mappingImagen2 from "../assets/projects/mappingimagen2.JPG";
+import mappingImagen3 from "../assets/projects/mappingimagen3.JPG";
+import mappingImagen4 from "../assets/projects/mappingimagen4.JPG";
 
 export const projectsData = [
   {
@@ -169,10 +171,10 @@ export const projectsData = [
         hero: mappingHero1,
         hero2: mappingHero2,
         hero3: mappingHero3,
-        img1: mappingVideo1,
-        img2: mappingVideo2,
+        img1: mappingImagen1,
+        img2: mappingVideo1,
         img3: mappingVideo3,
-        img4: mappingVideo4,
+        img4: mappingImagen2,
     },
     thumbnail: mappingPortada,
   }
