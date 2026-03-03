@@ -29,7 +29,7 @@ export const archiveProjects = [
     },
     heroImage: boldHero,
     galleryImages: [bold1, bold2, bold3, bold4, bold5],
-    link: "https://marcos.com",
+    link: "",
     video: "" 
   },
   { 
