@@ -16,32 +16,49 @@ import { projectsData } from "../../data/projects";
 
 const Projects = () => {
   const [projectList, setProjectList] = useState([]);
+  const [activeYear, setActiveYear] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  
   const containerRef = useRef(null);
   const lenis = useLenis(({ scroll }) => { });
   const { language } = useLanguage();
 
+  const years = ["All", ...new Set(projectsData.map(p => p.year))].sort((a, b) => b - a);
+  const categories = ["All", ...new Set(projectsData.map(p => p.category))];
+
   useEffect(() => {
+    let filtered = projectsData;
+    if (activeYear !== "All") {
+      filtered = filtered.filter(p => p.year === activeYear);
+    }
+    if (activeCategory !== "All") {
+      filtered = filtered.filter(p => p.category === activeCategory);
+    }
+
     const initialSet = Array(30)
       .fill()
       .flatMap((_, i) =>
-        projectsData.map((project, j) => ({
+        filtered.map((project, j) => ({
           ...project,
-          // Use client name effectively as the short name, or fall back to title if needed.
-          // In the original code, "name" was used.
           displayName: project.id === 'uttil' ? project.client : (project.title[language] || project.title['en']), 
-          displayCategory: project.role,
+          displayCategory: project.category,
           img: project.thumbnail,
-          uniqueId: i * projectsData.length + j,
+          uniqueId: i * filtered.length + j,
         }))
       );
     setProjectList(initialSet);
-  }, [language]);
+    
+    // Reset scroll when filter changes
+    if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+    }
+  }, [language, activeYear, activeCategory, lenis]);
 
 
   useEffect(() => {
-    if (containerRef.current && projectList.length > 0) {
+    if (projectList.length > 0) {
       ScrollTrigger.create({
-        scroller: containerRef.current,
         start: 0,
         end: "max",
         onLeave: (self) => {
@@ -49,13 +66,12 @@ const Projects = () => {
           ScrollTrigger.update();
         },
         onLeaveBack: (self) => {
-          self.scroll(ScrollTrigger.maxScroll(containerRef.current) - 1);
+          self.scroll(ScrollTrigger.maxScroll(window) - 1);
           ScrollTrigger.update();
         },
       });
 
-      const projectItems =
-        containerRef.current.querySelectorAll(".project-item");
+      const projectItems = document.querySelectorAll(".project-item");
       projectItems.forEach((item) => {
         gsap.to(item, {
           opacity: 1,
@@ -63,7 +79,6 @@ const Projects = () => {
           yoyo: true,
           ease: "none",
           scrollTrigger: {
-            scroller: containerRef.current,
             trigger: item,
             start: "center bottom",
             end: "center top",
@@ -79,12 +94,49 @@ const Projects = () => {
       <div
         className="projects"
         ref={containerRef}
-        style={{
-          height: "100vh",
-          //  overflowY: "auto"
-          // to enable infinite scrolling, uncomment `overflowY: "auto"` and remove the <ReactLenis root> component from root
-        }}
       >
+        <button 
+          className="toggle-filters-btn" 
+          onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+        >
+          <div className="filter-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 3.5H13M3 7H11M5.5 10.5H8.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+            </svg>
+          </div>
+          <span>{language === 'es' ? 'Filtros' : 'Filters'}</span>
+          <div className={`arrow ${isFiltersOpen ? 'open' : ''}`}>&#x2193;</div>
+        </button>
+
+        <div className={`filters-wrapper ${isFiltersOpen ? 'open' : ''}`}>
+          <div className="filters">
+            <div className="filter-group">
+              <span className="filter-label">{language === 'es' ? 'Año:' : 'Year:'}</span>
+              {years.map(year => (
+                <button 
+                  key={year} 
+                  className={`filter-btn ${activeYear === year ? 'active' : ''}`}
+                  onClick={() => setActiveYear(year)}
+                >
+                  {year === "All" ? (language === 'es' ? 'Todos' : 'All') : year}
+                </button>
+              ))}
+            </div>
+            <div className="filter-group">
+              <span className="filter-label">{language === 'es' ? 'Categoría:' : 'Category:'}</span>
+              {categories.map(cat => (
+                <button 
+                  key={cat} 
+                  className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
+                  onClick={() => setActiveCategory(cat)}
+                >
+                  {cat === "All" ? (language === 'es' ? 'Todos' : 'All') : cat}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="container">
           {projectList.map((project) => (
             <div className="row" key={project.uniqueId}>

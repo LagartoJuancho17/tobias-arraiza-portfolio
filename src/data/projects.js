@@ -37,8 +37,6 @@ import mappingVideo1 from "../assets/projects/mappingvideo1.MOV";
 import mappingVideo3 from "../assets/projects/mappingvideo3.MOV";
 import mappingImagen1 from "../assets/projects/mappingimagen1.webp";
 import mappingImagen2 from "../assets/projects/mappingimagen2.webp";
-import mappingImagen3 from "../assets/projects/mappingimagen3.webp";
-import mappingImagen4 from "../assets/projects/mappingimagen4.webp";
 
 export const projectsData = [
   {
@@ -47,6 +45,7 @@ export const projectsData = [
     client: "Uttil",
     studio: "Creative Works",
     role: "Brand Identity & App Design",
+    category: "UX/UI",
     title: {
       es: "Desarrollo de UI/UX para una app para Uttil",
       en: "UI/UX Development for an app for Uttil",
@@ -81,6 +80,7 @@ export const projectsData = [
     client: "Plus Bank",
     studio: "Tobias Arraiza",
     role: "UI/UX App Design",
+    category: "UX/UI",
     title: {
       es: "Plus Bank",
       en: "Plus Bank",
@@ -115,6 +115,7 @@ export const projectsData = [
     client: "Nadar",
     studio: "Tobias Arraiza",
     role: "Ux/Ui Design",
+    category: "UX/UI",
     title: {
       es: "Nadar - App Design",
       en: "Nadar - App Design",
@@ -150,6 +151,7 @@ export const projectsData = [
     client: "UMAI",
     studio: "Tobias Arraiza, Lola Mazza, Victoria Villalba, Camila Zalcman, Mariano Makedonsky",
     role: "Projection Mapping",
+    category: "Mapping",
     title: {
       es: "UMAI - Mapping",
       en: "UMAI - Mapping",
