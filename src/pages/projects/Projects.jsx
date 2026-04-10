@@ -58,34 +58,38 @@ const Projects = () => {
 
   useEffect(() => {
     if (projectList.length > 0) {
-      ScrollTrigger.create({
-        start: 0,
-        end: "max",
-        onLeave: (self) => {
-          self.scroll(1);
-          ScrollTrigger.update();
-        },
-        onLeaveBack: (self) => {
-          self.scroll(ScrollTrigger.maxScroll(window) - 1);
-          ScrollTrigger.update();
-        },
-      });
-
-      const projectItems = document.querySelectorAll(".project-item");
-      projectItems.forEach((item) => {
-        gsap.to(item, {
-          opacity: 1,
-          repeat: 1,
-          yoyo: true,
-          ease: "none",
-          scrollTrigger: {
-            trigger: item,
-            start: "center bottom",
-            end: "center top",
-            scrub: true,
+      let ctx = gsap.context(() => {
+        ScrollTrigger.create({
+          start: 0,
+          end: "max",
+          onLeave: (self) => {
+            self.scroll(1);
+            ScrollTrigger.update();
+          },
+          onLeaveBack: (self) => {
+            self.scroll(ScrollTrigger.maxScroll(window) - 1);
+            ScrollTrigger.update();
           },
         });
-      });
+
+        const projectItems = document.querySelectorAll(".project-item");
+        projectItems.forEach((item) => {
+          gsap.to(item, {
+            opacity: 1,
+            repeat: 1,
+            yoyo: true,
+            ease: "none",
+            scrollTrigger: {
+              trigger: item,
+              start: "center bottom",
+              end: "center top",
+              scrub: true,
+            },
+          });
+        });
+      }, containerRef);
+
+      return () => ctx.revert();
     }
   }, [projectList]);
 

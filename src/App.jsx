@@ -33,18 +33,20 @@ function App() {
         currentTitle = pageTitles["/project"];
     }
     document.title = currentTitle || "Tobias Arraiza";
-
-    if (location.pathname !== "/archive") {
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 700);
-    }
   }, [location.pathname]);
 
   return (
     <LanguageProvider>
       <Navbar />
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence 
+        mode="wait" 
+        initial={false} 
+        onExitComplete={() => {
+          if (location.pathname !== "/archive") {
+            window.scrollTo(0, 0);
+          }
+        }}
+      >
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/projects" element={<Projects />} />

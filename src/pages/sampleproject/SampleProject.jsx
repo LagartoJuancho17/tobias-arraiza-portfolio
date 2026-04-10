@@ -15,11 +15,25 @@ const SampleProject = () => {
   const lenis = useLenis();
 
   useEffect(() => {
-    if (lenis) {
-      lenis.scrollTo(0, { immediate: true, lock: false });
-    } else {
-      window.scrollTo(0, 0);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
     }
+
+    const resetStrickly = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true, force: true, lock: false });
+      }
+    };
+
+    // Resets both instantly on mount and one frame later just to ensure Lenis registers it
+    resetStrickly();
+    requestAnimationFrame(resetStrickly);
+    const timeout = setTimeout(resetStrickly, 100);
+
+    return () => clearTimeout(timeout);
   }, [id, lenis]);
 
   const isVideo = (src) => {
