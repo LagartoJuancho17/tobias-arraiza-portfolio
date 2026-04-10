@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import { ReactLenis } from "lenis/react";
+import { ReactLenis, useLenis } from "lenis/react";
+import { useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 import "./SampleProject.css";
@@ -11,6 +12,15 @@ import { projectsData } from "../../data/projects";
 const SampleProject = () => {
   const { t, language } = useLanguage();
   const { id } = useParams();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true, lock: false });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [id, lenis]);
 
   const isVideo = (src) => {
     if (typeof src !== 'string') return false;

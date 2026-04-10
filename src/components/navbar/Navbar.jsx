@@ -8,7 +8,6 @@ import "./Navbar.css";
 
 import ArticleImg1 from "../../assets/nav/article-1.webp";
 import ArticleImg2 from "../../assets/nav/article-2.webp";
-import ArticleImg3 from "../../assets/nav/article-3.webp";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
