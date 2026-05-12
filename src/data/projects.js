@@ -1,43 +1,53 @@
 // Uttil Images
-import uttilPortada from "../assets/projects/uttilportada.webp";
-import uttilHero from "../assets/projects/uttilhero.webp";
-import uttilHero2 from "../assets/projects/uttilhero2.webp";
-import uttilHero3 from "../assets/projects/uttilhero3.webp";
-import uttilImagen1 from "../assets/projects/uttilimagen1.webp";
-import uttilImagen2 from "../assets/projects/uttilimagen2.webp";
-import uttilImagen3 from "../assets/projects/uttilimagen3.webp";
-import uttilImagen4 from "../assets/projects/uttilimagen4.webp";
+import uttilPortada from "../assets/projects/uttil/uttilportada.webp";
+import uttilHero from "../assets/projects/uttil/uttilhero.webp";
+import uttilHero2 from "../assets/projects/uttil/uttilhero2.webp";
+import uttilHero3 from "../assets/projects/uttil/uttilhero3.webp";
+import uttilImagen1 from "../assets/projects/uttil/uttilimagen1.webp";
+import uttilImagen2 from "../assets/projects/uttil/uttilimagen2.webp";
+import uttilImagen3 from "../assets/projects/uttil/uttilimagen3.webp";
+import uttilImagen4 from "../assets/projects/uttil/uttilimagen4.webp";
 
 // Nadar Images
-import nadarPortada from "../assets/projects/nadarportada.webp";
-import nadarHero from "../assets/projects/nadarhero.webp";
-import nadarHero2 from "../assets/projects/nadarhero2.webp";
-import nadarHero3 from "../assets/projects/nadarhero3.webp";
-import nadarImagen1 from "../assets/projects/nadarimagen1.webp";
-import nadarImagen2 from "../assets/projects/nadarimagen2.webp";
-import nadarImagen3 from "../assets/projects/nadarimagen3.webp";
-import nadarImagen4 from "../assets/projects/nadarimagen4.webp";
+import nadarPortada from "../assets/projects/nadar/nadarportada.webp";
+import nadarHero from "../assets/projects/nadar/nadarhero.webp";
+import nadarHero2 from "../assets/projects/nadar/nadarhero2.webp";
+import nadarHero3 from "../assets/projects/nadar/nadarhero3.webp";
+import nadarImagen1 from "../assets/projects/nadar/nadarimagen1.webp";
+import nadarImagen2 from "../assets/projects/nadar/nadarimagen2.webp";
+import nadarImagen3 from "../assets/projects/nadar/nadarimagen3.webp";
+import nadarImagen4 from "../assets/projects/nadar/nadarimagen4.webp";
 
 // Mapping Images & Videos
-import mappingPortada from "../assets/projects/mappingportada.webp";
-import mappingHero1 from "../assets/projects/mappinghero1.mov";
-import mappingHero2 from "../assets/projects/mappinghero2.MOV";
-import mappingHero3 from "../assets/projects/mappinghero3.MOV";
-import mappingVideo1 from "../assets/projects/mappingvideo1.MOV";
-import mappingVideo3 from "../assets/projects/mappingvideo3.MOV";
-import mappingImagen1 from "../assets/projects/mappingimagen1.webp";
-import mappingImagen2 from "../assets/projects/mappingimagen2.webp";
+import mappingPortada from "../assets/projects/mapping/mappingportada.webp";
+import mappingHero1 from "../assets/projects/mapping/mappinghero1.mov";
+import mappingHero2 from "../assets/projects/mapping/mappinghero2.MOV";
+import mappingHero3 from "../assets/projects/mapping/mappinghero3.MOV";
+import mappingVideo1 from "../assets/projects/mapping/mappingvideo1.MOV";
+import mappingVideo3 from "../assets/projects/mapping/mappingvideo3.MOV";
+import mappingImagen1 from "../assets/projects/mapping/mappingimagen1.webp";
+import mappingImagen2 from "../assets/projects/mapping/mappingimagen2.webp";
 
 // Madres de Mayo Images & Videos
-import madresdemayoPortada from "../assets/projects/madresdemayoportada.jpg";
-import madresdemayoHero1 from "../assets/projects/madresdemayohero1.mp4";
-import madresdemayoHero2 from "../assets/projects/madresdemayohero2.mp4";
-import madresdemayoHero3 from "../assets/projects/madresdemayohero3.jpg";
-import madresdemayoImagen1 from "../assets/projects/madresdemayoimagen1.jpg";
-import madresdemayoImagen2 from "../assets/projects/madresdemayoimagen2.jpg";
-import madresdemayoImagen3 from "../assets/projects/madresdemayoimagen3.jpg";
-import madresdemayoImagen4 from "../assets/projects/madresdemayoimagen4.jpg";
-import madresdemayoImagen5 from "../assets/projects/madresdemayoimagen5.jpg";
+import madresdemayoPortada from "../assets/projects/madres-de-mayo/madresdemayoportada.jpg";
+import madresdemayoHero1 from "../assets/projects/madres-de-mayo/madresdemayohero1.mp4";
+import madresdemayoHero2 from "../assets/projects/madres-de-mayo/madresdemayohero2.mp4";
+import madresdemayoHero3 from "../assets/projects/madres-de-mayo/madresdemayohero3.jpg";
+import madresdemayoImagen1 from "../assets/projects/madres-de-mayo/madresdemayoimagen1.jpg";
+import madresdemayoImagen2 from "../assets/projects/madres-de-mayo/madresdemayoimagen2.jpg";
+import madresdemayoImagen3 from "../assets/projects/madres-de-mayo/madresdemayoimagen3.jpg";
+import madresdemayoImagen4 from "../assets/projects/madres-de-mayo/madresdemayoimagen4.jpg";
+import madresdemayoImagen5 from "../assets/projects/madres-de-mayo/madresdemayoimagen5.jpg";
+
+// Drillot Images & Videos
+import drillotPortada from "../assets/projects/drillot/drillotportada.png";
+import drillotHero1 from "../assets/projects/drillot/drillotimagen1.jpg";
+import drillotHero2 from "../assets/projects/drillot/drillothero2.jpg";
+import drillotHero3 from "../assets/projects/drillot/drillothero3.jpg";
+import drillotHero4 from "../assets/projects/drillot/drillothero4.jpg";
+import drillotVideo2 from "../assets/projects/drillot/drillotvideo2.mp4";
+import drillotVideo3 from "../assets/projects/drillot/drillotvideo3.mp4";
+import drillotVideo4 from "../assets/projects/drillot/drillotvideo4.mp4";
 
 export const projectsData = [
   {
@@ -181,5 +191,41 @@ export const projectsData = [
         img5: madresdemayoImagen5,
     },
     thumbnail: madresdemayoPortada,
+  },
+  {
+    id: "drillot",
+    year: "2026",
+    client: "Drillot",
+    studio: "Tobias Arraiza",
+    role: "Brand Identity, Web Design & Entrepreneurship",
+    category: "Branding / Web",
+    title: {
+      es: "Drillot - Creación de Identidad y Web",
+      en: "Drillot - Brand Identity and Web Design",
+    },
+    description1: {
+      es: "Creación de Identidad de marca, diseño web y desarrollo del emprendimiento de cuadros Drillot. Un proyecto integral que abarca desde la conceptualización hasta la puesta en marcha de la tienda online.",
+      en: "Creation of brand identity, web design and development of the Drillot framed art entrepreneurship. An integral project ranging from conceptualization to the launch of the online store.",
+    },
+    description2: {
+        es: "El objetivo principal fue transmitir calidad y diseño a través de una identidad visual sólida y una página web intuitiva y estética, logrando una experiencia de usuario que potencie las ventas del emprendimiento.",
+        en: "The main objective was to convey quality and design through a solid visual identity and an intuitive and aesthetic website, achieving a user experience that boosts the entrepreneurship's sales.",
+    },
+    subInfo: {
+        branding: { es: "Branding", en: "Branding" },
+        uiux: { es: "Web Design", en: "Web Design" },
+        development: { es: "Identidad", en: "Identity" },
+    },
+    link: "https://drillot.com.ar",
+    images: {
+        hero: drillotHero1,
+        hero2: drillotHero2,
+        hero3: drillotHero3,
+        img1: drillotHero4,
+        img2: drillotVideo2,
+        img3: drillotVideo3,
+        img4: drillotVideo4,
+    },
+    thumbnail: drillotPortada,
   }
 ];

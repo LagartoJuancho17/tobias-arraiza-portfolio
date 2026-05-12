@@ -112,6 +112,11 @@ const SampleProject = () => {
 
                 <div className="sub-col">
                   <span>&#x2192; {t.sampleProject?.fullInfo || "Full Information"}</span>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit', marginTop: '10px', display: 'inline-block'}}>
+                      <span>&#x2192; {language === 'es' ? "Visitar Web" : "Visit Website"}</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
