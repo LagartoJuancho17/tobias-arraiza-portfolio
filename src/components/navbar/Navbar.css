@@ -6,7 +6,7 @@
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 100;
   background-color: black;
 }
 
@@ -205,6 +205,10 @@
   cursor: pointer;
 }
 
+.mobile-controls {
+  display: none;
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -214,6 +218,7 @@
   background-color: #000;
   z-index: 10;
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  pointer-events: none;
   display: flex;
   flex-direction: column;
   padding: 2em;
@@ -298,6 +303,28 @@
   .nav-logo {
     display: block;
     font-weight: 500;
+  }
+
+  .mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .mobile-lang {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-lang span {
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .mobile-lang span.active {
+    color: #d8ff00;
+    font-weight: 700;
+    opacity: 1 !important;
   }
 
   .menu-open {

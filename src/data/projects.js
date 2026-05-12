@@ -1,22 +1,12 @@
 // Uttil Images
 import uttilPortada from "../assets/projects/uttilportada.webp";
-import uttilHero from "../assets/projects/uttilhero.png";
+import uttilHero from "../assets/projects/uttilhero.webp";
 import uttilHero2 from "../assets/projects/uttilhero2.webp";
 import uttilHero3 from "../assets/projects/uttilhero3.webp";
 import uttilImagen1 from "../assets/projects/uttilimagen1.webp";
 import uttilImagen2 from "../assets/projects/uttilimagen2.webp";
 import uttilImagen3 from "../assets/projects/uttilimagen3.webp";
 import uttilImagen4 from "../assets/projects/uttilimagen4.webp";
-
-// Plus Bank Images
-import plusbankPortada from "../assets/projects/plusbankportada.webp";
-import plusbankHero from "../assets/projects/plusbankhero.webp";
-import plusbankHero2 from "../assets/projects/plusbankhero2.mp4";
-import plusbankHero3 from "../assets/projects/plusbankhero3.webp";
-import plusbankImagen1 from "../assets/projects/plusbankimagen1.webp";
-import plusbankImagen2 from "../assets/projects/plusbankimagen2.webp";
-import plusbankImagen3 from "../assets/projects/plusbankimagen3.webp";
-import plusbankImagen4 from "../assets/projects/plusbankimagen4.webp";
 
 // Nadar Images
 import nadarPortada from "../assets/projects/nadarportada.webp";
@@ -37,6 +27,17 @@ import mappingVideo1 from "../assets/projects/mappingvideo1.MOV";
 import mappingVideo3 from "../assets/projects/mappingvideo3.MOV";
 import mappingImagen1 from "../assets/projects/mappingimagen1.webp";
 import mappingImagen2 from "../assets/projects/mappingimagen2.webp";
+
+// Madres de Mayo Images & Videos
+import madresdemayoPortada from "../assets/projects/madresdemayoportada.jpg";
+import madresdemayoHero1 from "../assets/projects/madresdemayohero1.mp4";
+import madresdemayoHero2 from "../assets/projects/madresdemayohero2.mp4";
+import madresdemayoHero3 from "../assets/projects/madresdemayohero3.jpg";
+import madresdemayoImagen1 from "../assets/projects/madresdemayoimagen1.jpg";
+import madresdemayoImagen2 from "../assets/projects/madresdemayoimagen2.jpg";
+import madresdemayoImagen3 from "../assets/projects/madresdemayoimagen3.jpg";
+import madresdemayoImagen4 from "../assets/projects/madresdemayoimagen4.jpg";
+import madresdemayoImagen5 from "../assets/projects/madresdemayoimagen5.jpg";
 
 export const projectsData = [
   {
@@ -73,41 +74,6 @@ export const projectsData = [
       img4: uttilImagen4,
     },
     thumbnail: uttilPortada,
-  },
-  {
-    id: "echoes-of-light",
-    year: "2026",
-    client: "Plus Bank",
-    studio: "Tobias Arraiza",
-    role: "UI/UX App Design",
-    category: "UX/UI",
-    title: {
-      es: "Plus Bank",
-      en: "Plus Bank",
-    },
-    description1: {
-      es: "Una app que busca la integración entre la innovación tecnológica y el diseño minimalista, pensada como una billetera virtual moderna, segura y centrada en la experiencia del usuario. Combina una interfaz limpia, intuitiva y visualmente equilibrada con funcionalidades avanzadas como transferencias instantáneas, gestión inteligente de gastos, pagos con QR, control de suscripciones y análisis financiero en tiempo real.",
-      en: "An app that seeks the integration between technological innovation and minimalist design, conceived as a modern, secure virtual wallet focused on the user experience. It combines a clean, intuitive, and visually balanced interface with advanced features such as instant transfers, intelligent expense management, QR payments, subscription control, and real-time financial analysis.",
-    },
-    description2: {
-      es: "El diseño minimalista no es solo una decisión estética, sino estratégica: reduce fricciones, simplifica procesos complejos y prioriza la claridad visual para que cada acción sea rápida y natural. La tecnología trabaja en segundo plano mediante sistemas de encriptación, autenticación biométrica y arquitectura escalable, garantizando seguridad, velocidad y confiabilidad.",
-      en: "Minimalist design is not just an aesthetic decision, but a strategic one: it reduces friction, simplifies complex processes, and prioritizes visual clarity so that each action is quick and natural. Technology works in the background through encryption systems, biometric authentication, and scalable architecture, ensuring security, speed, and reliability.",
-    },
-    subInfo: {
-      branding: { es: "Diseño UI/UX", en: "UI/UX Design" },
-      uiux: { es: "Arte Conceptual", en: "Concept Art" },
-      development: { es: "Diseño", en: "Design" },
-    },
-    images: {
-      hero: plusbankHero,
-      hero2: plusbankHero2,
-      hero3: plusbankHero3,
-      img1: plusbankImagen1,
-      img2: plusbankImagen2,
-      img3: plusbankImagen3,
-      img4: plusbankImagen4,
-    },
-    thumbnail: plusbankPortada,
   },
   {
     id: "nadar",
@@ -179,5 +145,41 @@ export const projectsData = [
         img4: mappingImagen2,
     },
     thumbnail: mappingPortada,
+  },
+  {
+    id: "madres-de-mayo",
+    year: "2026",
+    client: "Madres de Plaza de Mayo | CGT",
+    studio: "Tobias Arraiza, Lola Mazza, Mariano Makedonsky, Antonella Serrese",
+    role: "Video Editing",
+    category: "Video",
+    title: {
+      es: "Madres de Mayo",
+      en: "Madres de Mayo",
+    },
+    description1: {
+      es: "Documental sobre las Madres de Plaza de Mayo, combinando material de archivo histórico con testimonios de las Madres y su lucha inclaudicable.",
+      en: "Documentary about the Mothers of Plaza de Mayo, combining historical archive material with testimonies of the Mothers and their relentless struggle.",
+    },
+    description2: {
+        es: "El proyecto se centró en preservar y difundir la memoria histórica a través de un formato audiovisual. Se trabajó intensamente en la edición de videos para asegurar la mejor calidad posible del material documental, resaltando la emotividad y la fuerza de los testimonios.",
+        en: "The project focused on preserving and disseminating historical memory through an audiovisual format. We worked intensively on video editing to ensure the best possible quality of the documentary material, highlighting the emotionality and strength of the testimonies.",
+    },
+    subInfo: {
+        branding: { es: "Video", en: "Video" },
+        uiux: { es: "Edición", en: "Editing" },
+        development: { es: "Documental", en: "Documentary" },
+    },
+    images: {
+        hero: madresdemayoHero1,
+        hero2: madresdemayoHero2,
+        hero3: madresdemayoHero3,
+        img1: madresdemayoImagen1,
+        img2: madresdemayoImagen2,
+        img3: madresdemayoImagen3,
+        img4: madresdemayoImagen4,
+        img5: madresdemayoImagen5,
+    },
+    thumbnail: madresdemayoPortada,
   }
 ];

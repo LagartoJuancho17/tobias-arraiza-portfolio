@@ -27,6 +27,7 @@ const Navbar = () => {
 
       tl.current = gsap
         .timeline({ paused: true })
+        .set(".menu-overlay", { pointerEvents: "all" })
         .to(".menu-overlay", {
           duration: 1.25,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -135,11 +136,9 @@ const Navbar = () => {
           </div>
           <div className="menu-info">
             <div className="menu-info-col">
-              <a href="#">X &#8599;</a>
-              <a href="#">Instagram &#8599;</a>
-              <a href="#">LinkedIn &#8599;</a>
-              <a href="#">Behance &#8599;</a>
-              <a href="#">Dribbble &#8599;</a>
+              <a href="https://www.instagram.com/tobiasarraiza_/" target="_blank" rel="noopener noreferrer">Instagram &#8599;</a>
+              <a href="https://www.linkedin.com/in/tobias-arraiza/" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a>
+              <a href="https://www.behance.net/tobiasarraiza17" target="_blank" rel="noopener noreferrer">Behance &#8599;</a>
             </div>
             <div className="menu-info-col">
               <p>tobiasarraiza17@gmail.com</p>
@@ -156,8 +155,15 @@ const Navbar = () => {
         <Link to="/">Tobias Arraiza</Link>
       </div>
 
-      <div className="menu-open" onClick={toggleMenu}>
-        <p>Menu</p>
+      <div className="mobile-controls">
+        <div className="mobile-lang">
+          <span className={language === 'es' ? 'active' : ''} onClick={() => toggleLanguage('es')} style={{ opacity: language === 'es' ? 1 : 0.5 }}>ES</span>
+          <span style={{ opacity: 0.3, margin: "0 6px" }}>/</span>
+          <span className={language === 'en' ? 'active' : ''} onClick={() => toggleLanguage('en')} style={{ opacity: language === 'en' ? 1 : 0.5 }}>EN</span>
+        </div>
+        <div className="menu-open" onClick={toggleMenu}>
+          <p>Menu</p>
+        </div>
       </div>
 
       <div className="nav-links">

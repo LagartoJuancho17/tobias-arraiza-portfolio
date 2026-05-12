@@ -28,7 +28,7 @@ const Projects = () => {
   const categories = ["All", ...new Set(projectsData.map(p => p.category))];
 
   useEffect(() => {
-    let filtered = projectsData;
+    let filtered = [...projectsData].sort((a, b) => parseInt(b.year) - parseInt(a.year));
     if (activeYear !== "All") {
       filtered = filtered.filter(p => p.year === activeYear);
     }
@@ -147,11 +147,17 @@ const Projects = () => {
               <div className="project-item">
                 <div className="project-img">
                   <Link to={`/project/${project.id}`}>
+                    <div className="project-hover-overlay">
+                      <span>{language === 'es' ? 'Ver Proyecto' : 'View Project'}</span>
+                    </div>
                     <img src={project.img} alt="" />
                   </Link>
                 </div>
                 <div className="project-details">
-                  <p id="project-name"> &#x2192; {project.displayName}</p>
+                  <div className="project-info-left">
+                    <p id="project-name"> &#x2192; {project.displayName}</p>
+                    <p id="project-date">{project.year}</p>
+                  </div>
                   <p id="project-category">{project.displayCategory}</p>
                 </div>
               </div>

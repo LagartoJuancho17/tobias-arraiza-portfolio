@@ -15,13 +15,18 @@ const Footer = () => {
         </div>
         <div className="footer-sub-col">
           <div className="footer-link">
-            <Link to="https://www.instagram.com/tobiasarraiza_/">
+            <Link to="https://www.instagram.com/tobiasarraiza_/" target="_blank">
               &#x2192; Instagram
             </Link>
           </div>
           <div className="footer-link">
-            <Link to="https://www.behance.net/tobiasarraiza17">
+            <Link to="https://www.behance.net/tobiasarraiza17" target="_blank">
               &#x2192; Behance
+            </Link>
+          </div>
+          <div className="footer-link">
+            <Link to="https://www.linkedin.com/in/tobias-arraiza/" target="_blank">
+              &#x2192; LinkedIn
             </Link>
           </div>
         </div>
