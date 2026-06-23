@@ -21,10 +21,10 @@ import nadarImagen4 from "../assets/projects/nadar/nadarimagen4.webp";
 // Mapping Images & Videos
 import mappingPortada from "../assets/projects/mapping/mappingportada.webp";
 import mappingHero1 from "../assets/projects/mapping/mappinghero1.mov";
-import mappingHero2 from "../assets/projects/mapping/mappinghero2.MOV";
-import mappingHero3 from "../assets/projects/mapping/mappinghero3.MOV";
-import mappingVideo1 from "../assets/projects/mapping/mappingvideo1.MOV";
-import mappingVideo3 from "../assets/projects/mapping/mappingvideo3.MOV";
+import mappingHero2 from "../assets/projects/mapping/mappinghero2.mov";
+import mappingHero3 from "../assets/projects/mapping/mappinghero3.mov";
+import mappingVideo1 from "../assets/projects/mapping/mappingvideo1.mov";
+import mappingVideo3 from "../assets/projects/mapping/mappingvideo3.mov";
 import mappingImagen1 from "../assets/projects/mapping/mappingimagen1.webp";
 import mappingImagen2 from "../assets/projects/mapping/mappingimagen2.webp";
 
