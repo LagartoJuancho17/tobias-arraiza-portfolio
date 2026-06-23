@@ -56,7 +56,7 @@ function App() {
           <Route path="/sample-project" element={<SampleProject />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
+      {location.pathname !== "/projects" ? <Footer /> : null}
     </LanguageProvider>
   );
 }
