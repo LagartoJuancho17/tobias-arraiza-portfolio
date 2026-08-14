@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 import { useLanguage } from "../../context/LanguageContext";
 import { projectsData } from "../../data/projects";
 
-
 const Projects = () => {
   const [projectList, setProjectList] = useState([]);
   const [activeYear, setActiveYear] = useState("All");
