@@ -49,7 +49,107 @@ import drillotVideo3 from "../assets/projects/drillot/drillotvideo3.mp4";
 import drillotVideo4 from "../assets/projects/drillot/drillotvideo4.mp4";
 import drillotImagen1 from "../assets/projects/drillot/drillotimagen2.webp";
 
+// Portela Images
+import portelaPortada from "../assets/projects/portela/portelaportada.webp";
+import portelaHero from "../assets/projects/portela/portelahero.webp";
+import portelaHero2 from "../assets/projects/portela/portelahero2.webp";
+import portelaHero3 from "../assets/projects/portela/portelahero3.webp";
+import portelaImagen1 from "../assets/projects/portela/portelaimagen1.webp";
+import portelaImagen2 from "../assets/projects/portela/portelaimagen2.webp";
+import portelaImagen3 from "../assets/projects/portela/portelaimagen3.webp";
+import portelaImagen4 from "../assets/projects/portela/portelaimagen4.webp";
+
+// LongBow Images & Videos
+import longbowPortada from "../assets/projects/longbow/longbowportada.webp";
+import longbowHero from "../assets/projects/longbow/longbowhero.mp4";
+import longbowHero2 from "../assets/projects/longbow/longbowhero2.webp";
+import longbowHero3 from "../assets/projects/longbow/longbowhero3.mp4";
+import longbowImagen1 from "../assets/projects/longbow/longbowimagen1.webp";
+import longbowImagen2 from "../assets/projects/longbow/longbowimagen2.webp";
+import longbowImagen3 from "../assets/projects/longbow/longbowimagen3.mp4";
+import longbowImagen4 from "../assets/projects/longbow/longbowimagen4.webp";
+
 export const projectsData = [
+  {
+    id: "longbow",
+    year: "2026",
+    client: "LongBow",
+    studio: "Tobias Arraiza",
+    role: "Web Design & Development",
+    category: "UX/UI",
+    title: {
+      es: "LongBow - Sports Car Experience",
+      en: "LongBow - Sports Car Experience",
+    },
+    description1: {
+      es: "Diseño y desarrollo web interactivo para LongBow, una propuesta de autos deportivos eléctricos de alto rendimiento. El proyecto se enfoca en traducir la velocidad, aerodinámica y sofisticación del diseño automotriz a una experiencia digital inmersiva y de vanguardia.",
+      en: "Interactive web design and development for LongBow, an innovative high-performance electric sports car initiative. The project translates the speed, aerodynamics, and sophistication of automotive design into an immersive, cutting-edge digital experience.",
+    },
+    description2: {
+      es: "La plataforma combina animaciones fluidas, renderizados en movimiento y una arquitectura visual minimalista que destaca la ligereza y potencia del vehículo (FEV). Con un diseño responsive para mobile y desktop, se priorizó la interactividad, el impacto visual y las transiciones fluidas.",
+      en: "The platform pairs fluid animations, motion renders, and a minimalist visual architecture that emphasizes the vehicle's lightness and electric power (FEV). Featuring a responsive layout across mobile and desktop, the experience prioritizes interactivity, visual impact, and seamless transitions.",
+    },
+    subInfo: {
+      branding: { es: "Web Design", en: "Web Design" },
+      uiux: { es: "Diseño UI/UX", en: "UI/UX Design" },
+      development: { es: "Desarrollo Frontend", en: "Frontend Development" },
+    },
+    link: "https://autos-lujo-longbow-y3yg.vercel.app/",
+    linkText: {
+      es: "Visitar Web",
+      en: "Visit Website",
+    },
+    images: {
+      hero: longbowHero,
+      hero2: longbowHero2,
+      hero3: longbowHero3,
+      img1: longbowImagen1,
+      img2: longbowImagen2,
+      img3: longbowImagen3,
+      img4: longbowImagen4,
+    },
+    thumbnail: longbowPortada,
+  },
+  {
+    id: "portela",
+    year: "2026",
+    client: "Portela Café",
+    studio: "Tobias Arraiza",
+    role: "Brand Identity & Packaging",
+    category: "Branding",
+    title: {
+      es: "Portela Café - Identidad y Packaging",
+      en: "Portela Café - Brand Identity & Packaging",
+    },
+    description1: {
+      es: "Desarrollo integral de identidad visual y branding para Portela Café. El proyecto busca fusionar la calidez del café de especialidad con una estética moderna y nostálgica, inspirada en las fachadas y puertas clásicas porteñas.",
+      en: "Comprehensive visual identity and branding development for Portela Café. The project blends the warmth of specialty coffee with a modern yet nostalgic aesthetic, inspired by classic Buenos Aires architectural facades and doors.",
+    },
+    description2: {
+      es: "El sistema visual abarca el diseño de logotipo y tipografía personalizada, paleta cromática, packaging (vasos take-away y cajas de repostería), indumentaria para el personal (delantales y remeras de colección), diseño editorial del menú y piezas de comunicación. Cada punto de contacto fue diseñado para construir una experiencia de marca cercana, estética y memorable.",
+      en: "The visual system includes custom logo and typography design, color palette, packaging (take-away cups and pastry boxes), staff uniform apparel (aprons and collection t-shirts), editorial menu design, and communication assets. Every touchpoint was designed to build a warm, aesthetic, and memorable brand experience.",
+    },
+    subInfo: {
+      branding: { es: "Branding", en: "Branding" },
+      uiux: { es: "Packaging", en: "Packaging" },
+      development: { es: "Identidad Visual", en: "Visual Identity" },
+    },
+    link: "https://www.instagram.com/cafe.portela/",
+    linkText: {
+      es: "Visitar Instagram",
+      en: "Visit Instagram",
+    },
+    images: {
+      hero: portelaHero,
+      hero2: portelaHero2,
+      hero3: portelaHero3,
+      img1: portelaImagen1,
+      img2: portelaImagen2,
+      img3: portelaImagen3,
+      img4: portelaImagen4,
+    },
+    thumbnail: portelaPortada,
+  },
   {
     id: "uttil",
     year: "2025",
